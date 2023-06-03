@@ -11,11 +11,11 @@ const connection = mysql.createConnection({
   database: config.database,
 });
 
-const topicsRoutes = require('../routes/topics')(connection);
-const topicsDetailsRoutes = require('../routes/topicsdetails')(connection);
-const Publication_Authors = require('../routes/publication_authors')(connection);
-const Publication_Keywords = require('../routes/publication_keywords')(connection);
-const Author_Publications = require('../routes/author_publications')(connection);
+const topicsRoutes = require('./routes/topics')(connection);
+const topicsDetailsRoutes = require('./routes/topicsdetails')(connection);
+const Publication_Authors = require('./routes/publication_authors')(connection);
+const Publication_Keywords = require('./routes/publication_keywords')(connection);
+const Author_Publications = require('./routes/author_publications')(connection);
 
 // Use the route handlers for the respective endpoints
 app.use('/topics/details', topicsDetailsRoutes);
