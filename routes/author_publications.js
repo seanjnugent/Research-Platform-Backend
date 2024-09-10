@@ -7,7 +7,7 @@ module.exports = (connection) => {
     // Retrieve the topic from the URL parameter
     const { authorId } = req.params;
 
-    // Write your SQL query with the topic as a WHERE clause
+    // SQL query with the topic as a WHERE clause
     let query = `SELECT * FROM ids_dataplatform.vwauthor_publications WHERE authorId = '${authorId}';`;
 
     connection.query(query, (error, results) => {
