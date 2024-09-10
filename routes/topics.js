@@ -4,7 +4,7 @@ const router = express.Router();
 module.exports = (connection) => {
   // GET /topics
   router.get('/', (req, res) => {
-    // SQL query to fetch topics from the database
+    // SQL query to fetch keywords from the database
     let query = 'SELECT keyword FROM ids_dataplatform.keyword;';
 
     connection.query(query, (error, results) => {
